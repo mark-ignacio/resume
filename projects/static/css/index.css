@@ -1,0 +1,49 @@
+header {
+    background: #3d99cd;
+}
+
+header .name {
+    color: blue;
+}
+
+header .name .last {
+    color: white;
+    padding-left: 0.1em;
+}
+
+#content {
+    margin: 1em auto;
+}
+
+.project {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.project:hover {
+    background: #eee;
+}
+
+.project figcaption > p {
+    margin: 0;
+}
+
+.project .full {
+    display: none;
+}
+
+#project-modal .truncated{
+    display: none;
+}
+
+span.vocab {
+    border-bottom: 1px dotted black;
+    cursor: help;
+}
+
+footer {
+    padding: 1em 0 0.5em 0;
+    text-align: center;
+    background: #ddd;
+    font-size: 0.8em;
+}

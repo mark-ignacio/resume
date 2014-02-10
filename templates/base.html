@@ -1,0 +1,29 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark Ignacio</title>
+    <link rel="stylesheet" href="{% static 'css/foundation.min.css' %} " />
+    {% block extra_css %}{% endblock %}
+    <script src="{% static 'js/modernizr.js' %}"></script>
+  </head>
+  <body>
+    {% block header %}
+    {% endblock %}
+    {% block content %}
+    {% endblock %}
+    {% block footer %}
+        <footer>
+            &copy; Mark Ignacio
+        </footer>
+    {% endblock %}
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/foundation.min.js' %}"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>
