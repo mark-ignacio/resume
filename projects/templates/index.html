@@ -23,8 +23,7 @@
         <div class="row">
             <div class="large-12">
                 <h2>whoami</h2>
-                <p>I (Mark Ignacio) am a web developer-cum-devops Computer Science student at the University of Central Florida. As a full stack web developer, I've designed and produced <b>Python</b> and <b>Javascript</b> web applications for both private and public sector clients.</p>
-                <p>Information security is a big thing of mine. I competed nationally in the <a href="http://www.nationalccdc.org">Collegiate Cyber Defense Competition</a> for <span class="vocab" title="The University of Central Florida">UCF</span>, am currently a participating member of the student-run <a href="https://hackucf.org">Hack@UCF</a>, and I occasionally do web-focused penetration tests, too!</p>
+                {{ whoami|markdown }}
             </div>
         </div>
     </section>
@@ -32,7 +31,7 @@
         <div class="row">
             <div class="large-12">
                 <h2>Projects</h2>
-                <p>Most of my dev experience is with Python's <b>Django</b> framework. As a web host in my spare time, I maintain several <b>Wordpress</b>, <b>Mediawiki</b>, and custom PHP app installations. A few of them can be seen below.</p>
+                {{ projects_blurb|markdown }}
             </div>
         </div>
         <div class="row">
@@ -75,7 +74,7 @@
 
                 <div id="paid-projects" class="content">
                     <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
-                        {% for project in  paid_projects %}
+                        {% for project in paid_projects %}
                             <li>
                                 <figure class="project">
                                     <a class="project-link" href="{{ project.link }}"></a>
