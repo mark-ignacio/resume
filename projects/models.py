@@ -27,7 +27,6 @@ class Project(models.Model):
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True, help_text='Leave blank to display "Current"')
 
-
     class Meta:
         abstract = True
         ordering = ('-start_date',)
