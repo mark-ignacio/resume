@@ -27,12 +27,13 @@ class Project(models.Model):
     start_date = models.DateField(blank=True, null=True)
     end_date = models.DateField(blank=True, null=True, help_text='Leave blank to display "Current"')
 
-    def __unicode__(self):
-        return self.name
 
     class Meta:
         abstract = True
         ordering = ('-start_date',)
+
+    def __unicode__(self):
+        return self.name
 
 
 class PersonalProject(Project):
