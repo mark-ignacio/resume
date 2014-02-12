@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load markup %}
+{% load projects_extras %}
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/index.css' %} "/>
 {% endblock %}
@@ -23,7 +24,7 @@
             <div class="large-12">
                 <h2>whoami</h2>
                 <p>I (Mark Ignacio) am a web developer-cum-devops Computer Science student at the University of Central Florida. As a full stack web developer, I've designed and produced <b>Python</b> and <b>Javascript</b> web applications for both private and public sector clients.</p>
-                <p>Information security is a big thing of mine. I competed nationally in the <a href="">Collegiate Cyber Defense Competition</a> for <span class="vocab" title="The University of Central Florida">UCF</span>, am currently a participating member of the student-run <a href="https://hackucf.org">Hack@UCF</a>, and I occasionally do web-focused penetration tests, too!</p>
+                <p>Information security is a big thing of mine. I competed nationally in the <a href="http://www.nationalccdc.org">Collegiate Cyber Defense Competition</a> for <span class="vocab" title="The University of Central Florida">UCF</span>, am currently a participating member of the student-run <a href="https://hackucf.org">Hack@UCF</a>, and I occasionally do web-focused penetration tests, too!</p>
             </div>
         </div>
     </section>
@@ -43,13 +44,21 @@
                         {% for project in personal_projects %}
                             <li>
                                 <figure class="project">
-                                    <a class="project-link" href="{{ project.link }}"></a>
-                                    <img src="{{ project.image.url }}"/>
+                                    {% if project.image %}
+                                        <div class="full-img">
+                                            <img src="{{ project.image.url }}"/>
+                                        </div>
+                                    {% endif %}
                                     <figcaption>
                                         <h4>{{ project.name }}
-                                            <small><a href="{{ project.link }}">{{ project.link|truncatechars:25 }}</a>
+                                            <small>
+                                                <a href="{{ project.link }}">{{ project.link|truncatechars:25 }}</a>
+                                            </small>
+                                            <small class="times">
+                                                {{ project.start_date|date:"M Y" }} &#8211; {{ project.end_date|end_date }}
                                             </small>
                                         </h4>
+                                        <hr class="full"/>
                                         <div class="truncated">{{ project.description|markdown|truncatewords_html:12 }}</div>
                                         <div class="full">{{ project.description|markdown }}</div>
                                     </figcaption>
@@ -70,12 +79,19 @@
                             <li>
                                 <figure class="project">
                                     <a class="project-link" href="{{ project.link }}"></a>
-                                    {% if project.image %}<img src="{{ project.image.url }}"/>{% endif %}
+                                    {% if project.image %}
+                                        <div class="full-img">
+                                            <img src="{{ project.image.url }}"/>
+                                        </div>
+                                    {% endif %}
                                     <figcaption>
                                         <h4>{{ project.name }}
-                                            <small><a href="{{ project.link }}">{{ project.link|truncatechars:25 }}</a>
+                                            <small>
+                                                <a href="{{ project.link }}">{{ project.link|truncatechars:25 }}</a>
+                                                <br/>for {{ project.employer.name }}
                                             </small>
                                         </h4>
+                                        <hr class="full"/>
                                         <div class="truncated">{{ project.description|markdown|truncatewords_html:10 }}</div>
                                         <div class="full">{{ project.description|markdown }}</div>
                                     </figcaption>

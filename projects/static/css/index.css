@@ -3,7 +3,7 @@ header {
 }
 
 header .name {
-    color: blue;
+    color: #0000A7;
 }
 
 header .name .last {
@@ -32,8 +32,16 @@ header .name .last {
     display: none;
 }
 
+#project-modal hr.full {
+    margin: auto;
+}
+
 #project-modal .truncated{
     display: none;
+}
+
+#project-modal .full-img {
+    text-align: center;
 }
 
 span.vocab {
