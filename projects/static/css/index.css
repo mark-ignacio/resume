@@ -36,6 +36,10 @@ header .name .last {
     display: none;
 }
 
+.supplementary {
+    text-align: center;
+}
+
 #project-modal hr.full {
     margin: auto;
 }
