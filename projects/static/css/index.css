@@ -15,17 +15,21 @@ header .name .last {
     margin: 1em auto;
 }
 
-.project {
+.project > figure {
     padding: 10px;
     cursor: pointer;
 }
 
-.project:hover {
+.project >figure:hover {
     background: #eee;
 }
 
 .project figcaption > p {
     margin: 0;
+}
+
+.project .times {
+    white-space: nowrap;
 }
 
 .project .full {
