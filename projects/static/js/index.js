@@ -28,11 +28,16 @@
         $employerSelect.on('click', 'dd', function (event){
             // todo: more flexible implementation. maybe data-?
             var classList = event.currentTarget.classList;
+
+            // ignore clicks on active selection
+            if (event.currentTarget.className.indexOf('active') !== -1) {
+                return;
+            }
             if (classList.length > 0) {
                 var slug = event.currentTarget.classList[0];
                 // show everything
                 if (slug === 'all') {
-                    $comProjects.show();
+                    $comProjects.fadeIn('fast');
                 }
 
                 // only show matching slug
