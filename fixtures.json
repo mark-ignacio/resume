@@ -1,0 +1,18 @@
+[
+    {
+        "pk": 1,
+        "model": "mini_cms.taxonomy",
+        "fields": {
+            "val": "I (Mark Ignacio) am a web developer-cum-devops Computer Science student at the University of Central Florida. As a full stack web developer, I've designed and produced **Python** and **Javascript** web applications for both private and public sector clients.\r\n\r\nInformation security is a big thing of mine. I competed nationally in the [Collegiate Cyber Defense Competition](http://www.nationalccdc.org) for <span class=\"vocab\" title=\"The University of Central Florida\">UCF</span>, am currently a participating member of the student-run [Hack@UCF](https://hackucf.org), and I occasionally do web-focused penetration tests!",
+            "key": "whoami"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "mini_cms.taxonomy",
+        "fields": {
+            "val": "Most of my dev experience is with Python's **Django** framework. As a web host in my spare time, I run and maintain installations of several **Wordpress**, **Mediawiki**, and custom PHP applications; a few of them can be seen below.",
+            "key": "projects_blurb"
+        }
+    }
+]
