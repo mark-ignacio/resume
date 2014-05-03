@@ -65,30 +65,7 @@
                     </dl>
                     <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
                         {% for project in paid_projects %}
-                            <li class="project {{ project.employer.name|slugify }}">
-                                <figure>
-                                    <a class="project-link" href="{{ project.link }}"></a>
-                                    {% if project.image %}
-                                        <div class="full-img">
-                                            <img src="{{ project.image.url }}"/>
-                                        </div>
-                                    {% endif %}
-                                    <figcaption>
-                                        <h4>{{ project.name }}
-                                            <small>
-                                                <a href="{{ project.link }}">{{ project.link|truncatechars:25 }}</a>
-                                                <br/>for {{ project.employer.name }}
-                                            </small>
-                                            <small class="times">
-                                                ({{ project.start_date|date:"M Y" }} &#8211; {{ project.end_date|end_date }})
-                                            </small>
-                                        </h4>
-                                        <hr class="full"/>
-                                        <div class="truncated">{{ project.description|markdown|truncatewords_html:10 }}</div>
-                                        <div class="full">{{ project.description|markdown }}</div>
-                                    </figcaption>
-                                </figure>
-                            </li>
+                            {% include 'index_paid_project.html' %}
                         {% endfor %}
                     </ul>
                 </div>

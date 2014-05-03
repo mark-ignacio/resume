@@ -1,5 +1,6 @@
 {% extends 'index_project.html' %}
 {% load projects_extras %}
+{% block project_classes %}{{ project.employer.name|slugify }}{% endblock %}
 {% block h4 %}
     <h4>{{ project.name }}
         <small>

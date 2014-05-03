@@ -20,6 +20,11 @@
             <hr class="full"/>
             <div class="truncated">{{ project.description|markdown|truncatewords_html:12 }}</div>
             <div class="full">{{ project.description|markdown }}</div>
+            <ul class="tags">
+                {% for tag in project.tags.all %}
+                    <li class="{{ tag.category.slug }}">{{ tag.slug }}</li>
+                {% endfor %}
+            </ul>
         </figcaption>
     </figure>
 </li>
