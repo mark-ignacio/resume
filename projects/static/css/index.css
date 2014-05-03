@@ -63,3 +63,17 @@ footer {
     background: #ddd;
     font-size: 0.8em;
 }
+
+.resume-caption {
+    font-size: 0.8rem;
+    display: block;
+}
+
+.supplementary > a {
+    display: inline-block;
+    text-align: center;
+}
+
+.supplementary > .linkedin > img{
+    padding-left: 10px;
+}
