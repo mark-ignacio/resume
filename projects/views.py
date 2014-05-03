@@ -2,7 +2,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response
 
 from mini_cms.models import Taxonomy
-from models import PersonalProject, CommissionedProject, Employer
+from projects.models import PersonalProject, CommissionedProject, Employer
 
 
 def index(request):
