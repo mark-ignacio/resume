@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load markup %}
 {% load projects_extras %}
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'css/index.css' %} "/>
@@ -25,9 +24,9 @@
                 <h2>whoami</h2>
                 {{ whoami|markdown }}
                 <div class="supplementary">
-                    <a href="{% static 'resume.pdf' %}"><img src="{% static 'img/Reader-60px.png' %}" alt="Paper Resume (PDF)" title="Paper Resume (PDF)"/></a>
-                    <a href="{% static 'resume.docx' %}"><img src="{% static 'img/word-2013-60px.png' %}" alt="Paper Resume (Word)" title="Paper Resume (Word)"/></a>
-                    <a href="http://www.linkedin.com/pub/mark-ignacio/43/824/367"><img src="{% static 'img/InBug-60px-R.png' %}" alt="LinkedIn" title="LinkedIn"/></a>
+                    <a class="linkedin" href="http://www.linkedin.com/pub/mark-ignacio/43/824/367"><img src="{% static 'img/InBug-60px-R.png' %}" alt="LinkedIn" title="LinkedIn"/><h3 class="resume-caption">LinkedIn</h3></a>
+                    <a href="{% static 'resume.pdf' %}"><img src="{% static 'img/Reader-60px.png' %}" alt="Paper Resume (PDF)" title="Paper Resume (PDF)"/><h3 class="resume-caption">pdf</h3></a>
+                    <a href="{% static 'resume.docx' %}"><img src="{% static 'img/word-2013-60px.png' %}" alt="Paper Resume (Word)" title="Paper Resume (Word)"/><h3 class="resume-caption">docx</h3></a>
                 </div>
             </div>
         </div>
