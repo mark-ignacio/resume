@@ -1,100 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load markup %}
-{% load projects_extras %}
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/index.css' %} "/>
-{% endblock %}
-{% block extra_js %}
-    <script src="{% static 'js/index.js' %}"></script>
-{% endblock %}
-
-{% block header %}
-    <header>
-        <div class="row">
-            <hgroup class="large-12">
-                <h1 class="name">mark<span class="last">ignacio</span></h1>
-            </hgroup>
-        </div>
-    </header>
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
 {% endblock %}
 {% block content %}
-    <section id="bio">
-        <div class="row">
-            <div class="large-12">
-                <h2>whoami</h2>
-                {{ whoami|markdown }}
-                <div class="supplementary">
-                    <a href="{% static 'resume.pdf' %}"><img src="{% static 'img/Reader-60px.png' %}" alt="Paper Resume (PDF)" title="Paper Resume (PDF)"/></a>
-                    <a href="{% static 'resume.docx' %}"><img src="{% static 'img/word-2013-60px.png' %}" alt="Paper Resume (Word)" title="Paper Resume (Word)"/></a>
-                    <a href="http://www.linkedin.com/pub/mark-ignacio/43/824/367"><img src="{% static 'img/InBug-60px-R.png' %}" alt="LinkedIn" title="LinkedIn"/></a>
-                </div>
-            </div>
+    <nav>
+        <img class="up" src="{% static 'up.svg' %}" alt="up"/>
+        <img class="down active" src="{% static 'down.svg' %}" alt="up"/>
+        <img class="left" src="{% static 'left.svg' %}" alt="up"/>
+        <img class="right" src="{% static 'right.svg' %}" alt="up"/>
+    </nav>
+    <section class="lpage index">
+        <div>
+            <h1 class="name">mark ignacio</h1>
+
+            <h2><a href="#dev">dev</a> | <a href="#security">security</a> | <a href="#hobby">hobby</a></h2>
         </div>
     </section>
-    <section id="projects">
-        <div class="row">
-            <div class="large-12">
-                <h2>Projects</h2>
-                {{ projects_blurb|markdown }}
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-12">
-                <h3>Personal Projects</h3>
-
-                <div id="personal-projects" class="content active">
-                    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
-                        {% for project in personal_projects %}
-                            {% include 'index_project.html' %}
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="large-12">
-                <h3>Commercial Projects</h3>
-
-                <div id="paid-projects" class="content">
-                    <dl id="employer-select" class="sub-nav">
-                        <dt>Employers:</dt>
-                        <dd class="all active"><a href="">All</a></dd>
-                        {% for employer in employers %}
-                            <dd class="{{ employer.name|slugify }}"><a href="">{{ employer.name }}</a></dd>
-                        {% endfor %}
-                    </dl>
-                    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-2">
-                        {% for project in paid_projects %}
-                            <li class="project {{ project.employer.name|slugify }}">
-                                <figure>
-                                    <a class="project-link" href="{{ project.link }}"></a>
-                                    {% if project.image %}
-                                        <div class="full-img">
-                                            <img src="{{ project.image.url }}"/>
-                                        </div>
-                                    {% endif %}
-                                    <figcaption>
-                                        <h4>{{ project.name }}
-                                            <small>
-                                                <a href="{{ project.link }}">{{ project.link|truncatechars:25 }}</a>
-                                                <br/>for {{ project.employer.name }}
-                                            </small>
-                                            <small class="times">
-                                                ({{ project.start_date|date:"M Y" }} &#8211; {{ project.end_date|end_date }})
-                                            </small>
-                                        </h4>
-                                        <hr class="full"/>
-                                        <div class="truncated">{{ project.description|markdown|truncatewords_html:10 }}</div>
-                                        <div class="full">{{ project.description|markdown }}</div>
-                                    </figcaption>
-                                </figure>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <div id="project-modal" class="reveal-modal" data-reveal></div>
+    <section class="lpage dev"></section>
+    <section class="lpage security"></section>
+    <section class="lpage hobby"></section>
+    <section class="lpage about"></section>
+{% endblock %}
+{% block script %}
+    <script src="{% static 'js/index.js' %}"></script>
 {% endblock %}
