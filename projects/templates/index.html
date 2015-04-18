@@ -8,7 +8,7 @@
         <div>
             <h1 class="name">mark ignacio</h1>
 
-            <h2><a href="#dev">dev</a> | <a href="#security">security</a> | <a href="#hobby">hobby</a></h2>
+            <h2><a href="{% url 'dev' %}">dev</a> | <a href="{% url 'security' %}">security</a> | <a href="{% url 'hobby' %}">hobby</a></h2>
         </div>
     </section>
     <div id="other-lpages">
@@ -58,15 +58,6 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <section id="dev" class="lpage">
-            <div>dev</div>
-        </section>
-        <section id="security" class="lpage">
-            <div>{% include 'partial/security.html' %}</div>
-        </section>
-        <section id="hobby" class="lpage">
-            <div>hobby</div>
         </section>
         <section id="about" class="lpage">
             <div>about</div>

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/popout.css' %}"/>
+{% endblock %}
+{% block content %}
+    <section class="container popout">
+        <div class="row">
+            <div class="four columns">
+                <figure class="security">
+                    <img src="{% static 'img/security.svg' %}" alt="cyber bullets"/>
+                    <figcaption>
+                        <h3>Security</h3>
+
+                        <p>My biggest interest is in computer and network security, whether it be working,
+                            teaching, or researching. In terms of our current buzzword,</p>
+
+                        <h4 class="cyber">~cybersecurity~</h4>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="eight columns jobs">
+                <article>
+                    <header>
+                        <h4>TravelClick</h4>
+                        <h5><small>as a</small> Information Security Analyst Intern</h5>
+                    </header>
+                    <div class="description">
+                        <p>As part of a small internal security team I performed penetration tests, incident response,
+                            and helped to elevate TravelClick's security posture in both production and corporate environments.</p>
+                    </div>
+                </article>
+                <article>
+                    <header>
+                        <h4>Hack@UCF</h4>
+                        <h5><small>as a</small> Secretary, Lecturer, Teacher...</h5>
+                    </header>
+                    <div class="description">
+                        <p>The Collegiate Cyber Defense Club at the University of Central Florida is where I got my
+                            professional start in infosec, so I contribute back to the club a lot! I'm currently the
+                            secretary of the club, and I give a lot of talks about web application security and CTF
+                            problems!
+                        </p>
+                    </div>
+                </article>
+                <article>
+                    <header>
+                        <h4>Open Source contributions</h4>
+                    </header>
+                    <div class="description">
+                        <p>I contribute semi-frequently to several security-related open source projects! To see some of
+                        them, check out my GitHub account! </p>
+                        <p><a href="https://github.com/mark-ignacio">https://github.com/mark-ignacio</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}

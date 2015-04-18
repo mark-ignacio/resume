@@ -15,3 +15,15 @@ def index(request):
         'employers': employers,
     }
     return render_to_response('index.html', data, RequestContext(request))
+
+
+def development(request):
+    return render_to_response('development.html')
+
+
+def security(request):
+    return render_to_response('security.html')
+
+
+def hobby(request):
+    return render_to_response('hobby.html')
