@@ -4,23 +4,74 @@
     <link rel="stylesheet" href="{% static 'css/index.css' %}"/>
 {% endblock %}
 {% block content %}
-    <nav>
-        <img class="up" src="{% static 'up.svg' %}" alt="up"/>
-        <img class="down active" src="{% static 'down.svg' %}" alt="up"/>
-        <img class="left" src="{% static 'left.svg' %}" alt="up"/>
-        <img class="right" src="{% static 'right.svg' %}" alt="up"/>
-    </nav>
-    <section class="lpage index">
+    <section id="index" class="lpage">
         <div>
             <h1 class="name">mark ignacio</h1>
 
             <h2><a href="#dev">dev</a> | <a href="#security">security</a> | <a href="#hobby">hobby</a></h2>
         </div>
     </section>
-    <section class="lpage dev"></section>
-    <section class="lpage security"></section>
-    <section class="lpage hobby"></section>
-    <section class="lpage about"></section>
+    <div id="other-lpages">
+        <section id="sid" class="lpage">
+            <div class="container">
+                <h2 class="center">I do three kinds of things.</h2>
+
+                <div class="row">
+                    <div class="four columns">
+                        <figure class="dev">
+                            <img src="{% static 'img/dev.svg' %}" alt="happy programing icon :)"/>
+                            <figcaption>
+                                <h3>Development</h3>
+
+                                <p>I make programs and scripts that help run products, servers, and more! These mostly
+                                    work with web applications and devops.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="four columns">
+                        <figure class="security">
+                            <img src="{% static 'img/security.svg' %}" alt="cyber bullets"/>
+                            <figcaption>
+                                <h3>Security</h3>
+
+                                <p>My biggest interest is in computer and network security, whether it be working,
+                                    teaching, or plain ol' researching. In terms of our current buzzword,</p>
+
+                                <h4 class="cyber">~cybersecurity~</h4>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="four columns">
+                        <figure class="hobby">
+                            <img src="{% static 'img/arduino.svg' %}" alt=""/>
+                            <figcaption>
+                                <h3>Hobby</h3>
+
+                                <p>I tinker with a lot of complicated things in infosec and computer electronics that I
+                                    don't fully understand. I like wireless communications, binary exploitation, and
+                                    thinking up bad startup ideas!</p>
+                                <p>
+                                    I also uh, build model kits and do stuff with anime...
+                                </p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="dev" class="lpage">
+            <div>dev</div>
+        </section>
+        <section id="security" class="lpage">
+            <div>{% include 'partial/security.html' %}</div>
+        </section>
+        <section id="hobby" class="lpage">
+            <div>hobby</div>
+        </section>
+        <section id="about" class="lpage">
+            <div>about</div>
+        </section>
+    </div>
 {% endblock %}
 {% block script %}
     <script src="{% static 'js/index.js' %}"></script>

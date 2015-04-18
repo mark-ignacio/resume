@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="100px" height="100px" viewBox="5.0 -10.0 100.0 135.0" enable-background="new 0 0 100 100" xml:space="preserve">
+<path fill="#000000" d="M20,80.938h60c3.618,0,6.562-2.944,6.562-6.562v-52.5c0-3.618-2.944-6.562-6.562-6.562H20  c-3.618,0-6.562,2.944-6.562,6.562v52.5C13.438,77.993,16.382,80.938,20,80.938z M20,17.188h60c2.585,0,4.688,2.102,4.688,4.688  v4.688H15.312v-4.688C15.312,19.29,17.415,17.188,20,17.188z M15.312,28.438h69.375v45.938c0,2.585-2.102,4.688-4.688,4.688H20  c-2.585,0-4.688-2.102-4.688-4.688V28.438z"/>
+<circle fill="#000000" cx="21.875" cy="21.875" r="1.875"/>
+<circle fill="#000000" cx="29.375" cy="21.875" r="1.875"/>
+<circle fill="#000000" cx="36.875" cy="21.875" r="1.875"/>
+<ellipse fill="#000000" cx="40.625" cy="56.562" rx="1.875" ry="2.812"/>
+<ellipse fill="#000000" cx="59.375" cy="56.562" rx="1.875" ry="2.812"/>
+<path fill="#000000" d="M59.375,61.25h-18.75c-0.586,0-1.137,0.274-1.492,0.74c-0.354,0.467-0.471,1.073-0.313,1.637  c0.079,0.285,2.049,6.998,11.181,6.998c9.133,0,11.102-6.713,11.182-6.998c0.156-0.564,0.041-1.17-0.315-1.637  C60.514,61.524,59.961,61.25,59.375,61.25z"/>
+<text x="0.0" y="117.5" font-size="5.0" font-weight="bold" font-family="Helvetica Neue, Helvetica, Arial-Unicode, Arial, Sans-serif" fill="#000000">Created by Julien Deveaux</text><text x="0.0" y="122.5" font-size="5.0" font-weight="bold" font-family="Helvetica Neue, Helvetica, Arial-Unicode, Arial, Sans-serif" fill="#000000">from the Noun Project</text></svg>
